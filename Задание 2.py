@@ -18,6 +18,7 @@ a = start
 s = 0
 while a < end+1:
     if a == end:
+        print("Сумма:")
         print(end, end='\n')
     else:
         print(a, end='+')
@@ -32,3 +33,24 @@ for i in range(1, 10):
 print (n)
 print ('Задача_5')
 #Вывести цифры числа на каждой строчке.
+def gg(x):
+    for i in range(len(x)):
+        print(x[i])
+while True:
+    a = input('Введите натуральное число\n')
+    try:
+        a = gg(str(int(a)))
+        break
+    except:
+        print('Только натуральное число!')
+print ('Задача_6')
+#Найти сумму цифр числа.
+def s(a):
+    result = 0
+    while a > 0:
+        result += a % 10
+        a //= 10
+    return result
+
+
+print(s(123))
